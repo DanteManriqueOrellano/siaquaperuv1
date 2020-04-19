@@ -1,0 +1,13 @@
+<btnupload [nombreBoton]='nombreBoton' [icono]='icono' (archivosCargados)='archivosCargados($event)' ></btnupload>
+
+<section [formGroup]="formGroup" >
+    <div [formArrayName]="formControlNames.files" class="card_wrapper">
+        <div class="card" *ngFor="let unFile of formGroupControls.files.controls; let i=index">
+           <card  [urlLocal]='formGroupValues.files[i].urlLocal'></card>
+            <app-file  [formControl]='unFile'></app-file>
+            <btnsend class="card_footer" [nombreBoton]='nombreBotonEliminar' (click)='eliminar(i)' ></btnsend>    
+           
+        </div>
+    </div>
+</section>
+

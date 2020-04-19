@@ -1,0 +1,295 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+input[type='checkbox']{
+    
+    height: 50px;
+    width: 50px;
+    -webkit-appearance: none;
+    outline:none;
+    margin-bottom: 15px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(70,70,70,0.12);
+    position: relative;
+    border-radius: 20%;
+    border: 8px solid #ececec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:after{
+    
+    /*coloca el icono*/
+    font-family: FontAwesome;
+    content: '\f011';
+    color:#e74c3c;/*7a7a7a*/
+    font-size: 18px;
+    /*fin*/
+
+}
+input[type="checkbox"]:checked{
+    /*efecto que se produce al hacer chick en el boton*/
+    border: 2px solid transparent;
+    background: linear-gradient(160deg, #ebecf0 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17), 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.1s;
+  /*fin*/
+}
+input[type="checkbox"]:checked:after{
+    color: #15e38a;/*3ce7a2*/
+    
+}
+.morphchk {
+    /**/
+   
+    border: 8px solid #ececec;
+    box-shadow: 
+    -10px -10px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(70,70,70,0.12);
+    position: relative;
+
+    /*efecto visual estado inicial*/
+}
+
+ .morphbtn {
+    border: 2px solid transparent;
+    background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17), 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.1s;
+  }
+  .morphbtn.active, .morphbtn:active, .morphbtn:focus {
+    color:#15e38a;/*3ce7a2*/
+    border: 2px solid #fafafa;
+    box-shadow: inset -3px -3px 5px 0px #ffffff, -1px -1px 4px 0px #ffffff, inset 5px 5px 10px 0px rgba(0, 0, 0, 0.12), inset 2px 2px 3px 0px rgba(0, 0, 0, 0.07), 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn {
+    padding: 13px;
+    border-radius: 5rem;
+    text-align: center;
+    cursor: pointer;
+  }
+ 
+  .btn--icon {
+    
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 1.2rem;
+  }
+  .btn--icon--rounded {
+    border-radius: 100%;
+  }
+
+.radiobutton{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50%;
+  box-sizing: 30px  ;
+  margin: 15px;
+  border: 2px solid transparent;
+}
+
+.radiobutton label {
+  position: relative;
+ 
+}
+.radiobutton label input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.radiobutton label .fa {
+  /*el boton en estado inicial*/
+ 
+  position: relative;
+  
+  width: 40px;
+  height: 40px;
+ /* background: #ebecf0 ;*/
+  background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+  line-height: 40px;/*ubicacion del icono del boton*/
+  text-align: center;
+  margin: 0 8px;/*margen entre el placeholder y el boton*/
+  color:  #7a7a7a;
+  font-size: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17), 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+  transition: 0.1s;  
+}
+
+.radiobutton label input:checked ~ .fa{
+
+  /*al hacerle click*/
+  
+border: 2px solid transparent;
+background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+
+box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17), 1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+transition: 0.1s;
+color: #15e38a;
+}
+
+input[type='file']{
+    display: none;
+}
+.upladfile{
+    padding: 14px;
+   
+    background: linear-gradient(160deg, #f0f1f4 0%, #e4e6eb 100%);
+    border: 2px solid transparent;
+    box-shadow: -3px -3px 6px 2px #ffffff, 5px 5px 8px 0px rgba(0, 0, 0, 0.17),
+    1px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    transition: 0.1s;
+    position: relative;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-label {
+  color: #868b98;
+  display: block;
+  text-align: start;
+  margin: 5px 10px 5px;
+}
+
+.input {
+  background-color: var(--back-color);
+  border-radius: 10px;
+  border: 3px solid #f3f4f7;
+  box-shadow: 2px 2px 3px rgba(55, 84, 170, .15),
+              inset 0px 0px 4px rgba(255, 255, 255, 0),
+              inset 7px 7px 15px rgba(55, 84, 170, .15),
+              inset -7px -7px 20px rgba(255, 255, 255, 1),
+              0px 0px 4px rgba(255, 255, 255, .2) !important;
+  padding: 5px 15px;
+  outline: none !important;
+  color: #535D74;
+}
+
+*
+{  
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.progress_container{
+    position: relative;
+    width: 500px;
+}
+.progress_container span{
+    color: #6c6c6c;/*#fff;color de la descripcion y del porcentaje*/
+}
+.progress_container .progress_base{
+    
+  position: relative;
+  display: flex;
+  padding: 24px 10px 18px; 
+  border-radius: 10px;
+  border: 4px solid #f3f4f7;
+  box-shadow: 7px 7px 15px rgba(55, 84, 170, .15),
+              -7px -7px 20px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0),
+              inset 7px 7px 15px rgba(55, 84, 170, .15),
+              inset -7px -7px 20px rgba(255, 255, 255, 1),
+              0px 0px 4px rgba(255, 255, 255, .2) !important;
+}
+.progress_container .progress_base:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255, .1);
+    z-index: 10;
+}
+
+
+.progress_container .progress_base .Value {
+    position: relative;
+    width: 40px;
+    text-align: left;
+    color: #fff;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+.progress_container .progress_base .percent{
+    position: relative;
+    width: calc(100% - 150px);
+    height: 20px;
+    margin: 0 10px;
+    border-radius:10px;
+    background: #f3f4f7;
+    box-shadow: inset 0 0 10px #000;
+    overflow: hidden;
+}
+.progress_container .progress_base .percent .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow:  inset 0 0 2px #000;
+    animation: animate_progress 4s ease-in-out forwards;
+}
+@keyframes animate_progress {
+    
+        from {
+            width: 0;
+        }
+    
+}
+.progress_container .progress_base:nth-child(1) .percent .progress{
+    background-image:linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+    background-size: 24em 0.25em;
+
+
+}
+/*la cartilla es responsive*/
+.card_wrapper {
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	padding: 20px;
+	justify-items: center;
+	justify-content: center;
+	align-items: start;
+}
+
+.card {
+
+  
+  display: grid;
+  margin: 10px 0;
+  padding: 15px;
+  
+  background: linear-gradient(90deg, #ebecf0, #ebecf0);
+  border-radius: 4px;
+  box-shadow: -6px -6px 20px rgba(255,255,255,1), 6px 6px 20px rgba(0,0,0,0.1);
+  
+  
+}
+.card_footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  margin-top: 13px;
+  
+
+}
+/*fin cartilla*/
+
+
+
